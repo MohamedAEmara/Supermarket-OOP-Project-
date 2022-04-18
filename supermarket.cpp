@@ -60,7 +60,6 @@ ofstream output;
 
 void WriteProducts()
 {
-    //MyFile.open("D:\\OOP Projects\\Project 2\\Sample.txt", ios::app);
     MyFile.open("Sample.txt", ios::app);
     MyProduct.CreateProduct();
     MyFile.write((char*)&MyProduct, sizeof(MyProduct));
@@ -72,7 +71,6 @@ void WriteProducts()
 void DisplayProducts()
 {
     cout << "All the products Info: " << endl;
-    //input.open("D:\\OOP Projects\\Project 2\\Sample.txt");
     input.open("Sample.txt");
 
     while (input.read((char*)&MyProduct, sizeof(MyProduct)))
@@ -84,7 +82,6 @@ void DisplayProducts()
 
 void SearchProduct(int n)
 {
-    //input.open("D:\\OOP Projects\\Project 2\\Sample.txt");
     input.open("Sample.txt");
 
     int flag = 0;
@@ -111,10 +108,8 @@ void DeleteProduct()
     int num;
     cout << "\n\nPlease enter the product to be deleted..\n";
     cin >> num;
-    //input.open("D:\\OOP Projects\\Project 2\\Sample.txt");
     input.open("Sample.txt");
     fstream f2;
-    //output.open("D:\\OOP Projects\\Project 2\\Replace.txt");
     output.open("Replace.txt");
     output.clear();
     while (input.read((char*)&MyProduct, sizeof(MyProduct)))
